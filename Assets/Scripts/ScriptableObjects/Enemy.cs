@@ -7,6 +7,7 @@ using UnityEngine;
 public class Enemy : ScriptableObject
 {
     public string EnemyName;
+    public float Health;
     public float MovementSpeed;
     public AudioClip ShootSound;
     public float FireDelay;

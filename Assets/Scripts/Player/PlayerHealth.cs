@@ -6,25 +6,43 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public static PlayerHealth Instance;
-
-    public int CurrentHealth;
+    public float MaxHealth;
+    public float CurrentHealth;
 
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
-        SetHealth(PlayerManager.Instance.MaxHealth);
+        SetHealth(MaxHealth);
     }
 
-    public void SetHealth(int num)
+    public void SetHealth(float num)
     {
         CurrentHealth = num;
         HealthBarManager.Instance.SetHealthBar(num);
     }
 
-    public void TakeDamage(int num)
+    public void Heal(float num)
+    {
+        if(CurrentHealth + num >= MaxHealth)
+        {
+            SetHealth(MaxHealth);
+        }
+        else
+        {
+            SetHealth(CurrentHealth + num);
+        }
+    }
+
+    public void TakeDamage(float num)
     {
         SetHealth(CurrentHealth - num);
+        if (CurrentHealth <= 0) Die();
+    }
+
+    public void Die()
+    {
+
     }
 
     // Update is called once per frame

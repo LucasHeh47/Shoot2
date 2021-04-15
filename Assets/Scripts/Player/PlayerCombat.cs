@@ -30,7 +30,6 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         Instance = this;
-        if (PlayerManager.Instance == null) Debug.Log("PM Manager Null");
         delay = GetFireRate(SelectedWeapon);
         ReloadTime = SelectedWeapon.ReloadTime;
         audio = GetComponent<AudioSource>();

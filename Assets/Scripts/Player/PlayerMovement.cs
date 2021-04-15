@@ -7,6 +7,10 @@ public class PlayerMovement : MonoBehaviour
 
     public static PlayerMovement Instance;
 
+    public float MovementSpeed;
+    public int MaxJumpCount;
+    public float JumpForce;
+
     public Transform camera;
     private int JumpCount;
     public Rigidbody2D rb;
@@ -23,23 +27,23 @@ public class PlayerMovement : MonoBehaviour
         camera.position = new Vector3(transform.position.x, transform.position.y, camera.position.z);
         if (Input.GetKey("a"))
         {
-            transform.position = new Vector3(transform.position.x - PlayerManager.Instance.MovementSpeed * Time.deltaTime, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - MovementSpeed * Time.deltaTime, transform.position.y, transform.position.z);
         }
         if (Input.GetKey("d"))
         {
-            transform.position = new Vector3(transform.position.x + PlayerManager.Instance.MovementSpeed * Time.deltaTime, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + MovementSpeed * Time.deltaTime, transform.position.y, transform.position.z);
         }
         if (Input.GetKeyDown(KeyCode.Space) && JumpCount > 0)
         {
             rb.velocity = new Vector2(0, 0);
-            rb.velocity = Vector2.up * PlayerManager.Instance.JumpForce;
+            rb.velocity = Vector2.up * JumpForce;
             JumpCount--;
         }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Platform")) JumpCount = PlayerManager.Instance.MaxJumpCount;
+        if (col.gameObject.CompareTag("Platform")) JumpCount = MaxJumpCount;
     }
 
 }

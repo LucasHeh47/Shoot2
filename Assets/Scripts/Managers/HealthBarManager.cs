@@ -10,7 +10,12 @@ public class HealthBarManager : MonoBehaviour
 
     public Slider bar;
 
-    public void SetHealthBar(int num)
+    public void Start()
+    {
+        Instance = this;
+    }
+
+    public void SetHealthBar(float num)
     {
         bar.value = num;
     }
