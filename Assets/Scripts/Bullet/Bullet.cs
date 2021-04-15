@@ -2,21 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-
-    public static PlayerManager Instance;
-
-    public int MaxHealth;
-
-    public float MovementSpeed;
-    public int MaxJumpCount;
-    public float JumpForce;
+    public bool Active = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this;
+        
     }
 
     // Update is called once per frame

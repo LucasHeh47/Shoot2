@@ -13,41 +13,40 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   Price: 0
-  RestockPrice: 0
-  ShootSound: {fileID: 0}
-  GunImage: {fileID: 0}
-  ProjectileImage: {fileID: 0}
-  GunName: 
-  DefaultGun: 0
-  BulletSpeed: 0
-  ReloadTime: 0
-  ClipSize: 0
+  ShootSound: {fileID: 8300000, guid: 7bc503aecf54d9b40a03f46a768303df, type: 3}
+  GunImage: {fileID: 21300000, guid: f2fbfcc0691753e4c885139157c2df10, type: 3}
+  ProjectileImage: {fileID: 21300000, guid: 5065a3d2ca55f994cabc00d3f9254837, type: 3}
+  GunName: Pistol
+  DefaultGun: 1
+  BulletSpeed: 25
+  ReloadTime: 3
+  ClipSize: 7
   AmmoInClip: 0
-  Ammo: 0
+  Ammo: 21
   CurrentAmmo: 0
   Pierces: 0
   Rarity: 0
-  CommonCritChance: 0
-  CommonDamage: 0
-  CommonFireRate: 0
-  CommonRange: 0
-  UnCommonCritChance: 0
-  UnCommonDamage: 0
-  UnCommonFireRate: 0
-  UnCommonRange: 0
-  RareCritChance: 0
-  RareDamage: 0
-  RareFireRate: 0
-  RareRange: 0
-  EpicCritChance: 0
-  EpicDamage: 0
-  EpicFireRate: 0
-  EpicRange: 0
-  LegendaryCritChance: 0
-  LegendaryDamage: 0
-  LegendaryFireRate: 0
-  LegendaryRange: 0
-  CommonToUnCommonCost: 0
-  UnCommonToRareCost: 0
-  RareToEpicCost: 0
-  EpicToLegendaryCost: 0
+  CommonCritChance: 15
+  CommonDamage: 10
+  CommonFireRate: 1.2
+  CommonRange: 5
+  UnCommonCritChance: 13
+  UnCommonDamage: 17.5
+  UnCommonFireRate: 1.125
+  UnCommonRange: 5.5
+  RareCritChance: 11
+  RareDamage: 25
+  RareFireRate: 1.05
+  RareRange: 6
+  EpicCritChance: 9
+  EpicDamage: 32.5
+  EpicFireRate: 0.9
+  EpicRange: 6.25
+  LegendaryCritChance: 7
+  LegendaryDamage: 50
+  LegendaryFireRate: 0.75
+  LegendaryRange: 6.5
+  CommonToUnCommonCost: 500
+  UnCommonToRareCost: 1250
+  RareToEpicCost: 2000
+  EpicToLegendaryCost: 2750

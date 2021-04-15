@@ -7,11 +7,12 @@ public class PlayerMovement : MonoBehaviour
 
     public static PlayerMovement Instance;
 
+    public Transform camera;
     private int JumpCount;
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         Instance = this;
     }
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        camera.position = new Vector3(transform.position.x, transform.position.y, camera.position.z);
         if (Input.GetKey("a"))
         {
             transform.position = new Vector3(transform.position.x - PlayerManager.Instance.MovementSpeed * Time.deltaTime, transform.position.y, transform.position.z);
