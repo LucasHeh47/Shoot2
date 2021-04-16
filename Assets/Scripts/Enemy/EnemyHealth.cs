@@ -15,8 +15,8 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         HealthBar = HealthBarObj.GetComponent<Slider>();
-        HealthBar.maxValue = enemy.Health;
-        HealthBar.value = enemy.Health;
+        HealthBar.maxValue = enemy.MaxHealth;
+        HealthBar.value = enemy.MaxHealth;
     }
 
     // Update is called once per frame
@@ -34,10 +34,46 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    public void IncreaseMaxHealth()
+    {
+        enemy.MaxHealth *= enemy.MaxHealthIncrease;
+    }
+
     public void Die()
     {
+        PlayParticles();
+        PlayerScore.Instance.AddScore(enemy.PointsPerKill);
         Destroy(gameObject);
-        PlayerHealth.Instance.Heal(enemy.Health / 20);
+        EnemyManager.Instance.Kills++;
+        CameraEffects.ShakeOnce();
+        EnemyManager.Instance.Kills++;
+        EnemyManager.Instance.enemiesLeft--;
+        EnemyManager.Instance.enemiesOnMap--;
+        EnemyManager.Instance.enemiesLeftText.SetText(EnemyManager.Instance.enemiesLeft.ToString());
+    }
+
+    public void PlayParticles()
+    {
+        GetComponent<ParticleSystem>().Play();
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Bullet"))
+        {
+            TakeDamage(PlayerCombat.Instance.GetDamage(PlayerCombat.Instance.SelectedWeapon));
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.CompareTag("player"))
+        {
+            PlayParticles();
+            PlayerHealth.Instance.TakeDamage(enemy.PhysicalDamage);
+            EnemyManager.Instance.enemiesLeft--;
+            EnemyManager.Instance.enemiesOnMap--;
+            EnemyManager.Instance.enemiesLeftText.SetText(EnemyManager.Instance.enemiesLeft.ToString());
+            Destroy(gameObject);
+        }
+
     }
 
 }

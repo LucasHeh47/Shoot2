@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public float MaxHealth;
     public float CurrentHealth;
 
+    public HealthBarManager bar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     public void SetHealth(float num)
     {
         CurrentHealth = num;
-        HealthBarManager.Instance.SetHealthBar(num);
+        bar.SetHealthBar(num);
     }
 
     public void Heal(float num)

@@ -8,6 +8,9 @@ public class Enemy : ScriptableObject
 {
     public string EnemyName;
     public float Health;
+    public float MaxHealth;
+    public float DefaultMaxHealth;
+    public float MaxHealthIncrease;
     public float MovementSpeed;
     public AudioClip ShootSound;
     public float FireDelay;
@@ -15,4 +18,6 @@ public class Enemy : ScriptableObject
     public float BulletSpeed;
     public float ProjectileDamage;
     public float PhysicalDamage;
+    public int StartSpawningRound;
+    public int PointsPerKill;
 }

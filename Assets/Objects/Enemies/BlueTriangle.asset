@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51ba0f6331b2f9e4197c8089f73a0f90, type: 3}
-  m_Name: RedTriangle
+  m_Name: BlueTriangle
   m_EditorClassIdentifier: 
-  EnemyName: Red Triangle
-  Health: 50
-  MaxHealth: 50
-  DefaultMaxHealth: 50
+  EnemyName: Blue Triangle
+  Health: 75
+  MaxHealth: 75
+  DefaultMaxHealth: 75
   MaxHealthIncrease: 1.1
-  MovementSpeed: 5
+  MovementSpeed: 3
   ShootSound: {fileID: 0}
   FireDelay: 0
   ProjectileImage: {fileID: 0}
-  BulletSpeed: 5
-  ProjectileDamage: 25
-  PhysicalDamage: 35
-  StartSpawningRound: 0
-  PointsPerKill: 10
+  BulletSpeed: 6
+  ProjectileDamage: 35
+  PhysicalDamage: 45
+  StartSpawningRound: 5
+  PointsPerKill: 25

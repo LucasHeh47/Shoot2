@@ -21,29 +21,29 @@ MonoBehaviour:
   BulletSpeed: 25
   ReloadTime: 3
   ClipSize: 7
-  AmmoInClip: 0
+  AmmoInClip: 5
   Ammo: 21
-  CurrentAmmo: 0
+  CurrentAmmo: 21
   Pierces: 0
   Rarity: 0
   CommonCritChance: 15
-  CommonDamage: 10
+  CommonDamage: 25
   CommonFireRate: 1.2
   CommonRange: 5
   UnCommonCritChance: 13
-  UnCommonDamage: 17.5
+  UnCommonDamage: 32.5
   UnCommonFireRate: 1.125
   UnCommonRange: 5.5
   RareCritChance: 11
-  RareDamage: 25
+  RareDamage: 40
   RareFireRate: 1.05
   RareRange: 6
   EpicCritChance: 9
-  EpicDamage: 32.5
+  EpicDamage: 47.5
   EpicFireRate: 0.9
   EpicRange: 6.25
   LegendaryCritChance: 7
-  LegendaryDamage: 50
+  LegendaryDamage: 60
   LegendaryFireRate: 0.75
   LegendaryRange: 6.5
   CommonToUnCommonCost: 500

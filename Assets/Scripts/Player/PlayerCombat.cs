@@ -18,6 +18,8 @@ public class PlayerCombat : MonoBehaviour
     public TextMeshProUGUI reloadingText;
     public TextMeshProUGUI AmmoText;
 
+    public SpriteRenderer spriteRenderer;
+
     public GameObject bullet;
     public Transform bulletSpawn;
 
@@ -33,7 +35,7 @@ public class PlayerCombat : MonoBehaviour
         delay = GetFireRate(SelectedWeapon);
         ReloadTime = SelectedWeapon.ReloadTime;
         audio = GetComponent<AudioSource>();
-
+        spriteRenderer.sprite = SelectedWeapon.GunImage;
         ReloadGun(SelectedWeapon);
     }
 
