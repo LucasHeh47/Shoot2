@@ -13,16 +13,18 @@ MonoBehaviour:
   m_Name: RedTriangle
   m_EditorClassIdentifier: 
   EnemyName: Red Triangle
-  Health: 50
-  MaxHealth: 50
+  Health: 30
+  MaxHealth: 73.205
   DefaultMaxHealth: 50
   MaxHealthIncrease: 1.1
   MovementSpeed: 5
   ShootSound: {fileID: 0}
-  FireDelay: 0
+  FireDelay: 3
   ProjectileImage: {fileID: 0}
+  Shoots: 0
   BulletSpeed: 5
   ProjectileDamage: 25
   PhysicalDamage: 35
+  ProjectileRange: 3
   StartSpawningRound: 0
   PointsPerKill: 10

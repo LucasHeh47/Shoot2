@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8738daf352ac43d478613c64a8b3e899, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  Price: 0
+  ShootSound: {fileID: 0}
+  GunImage: {fileID: 0}
+  ProjectileImage: {fileID: 0}
+  GunName: 
+  DefaultGun: 0
+  BulletSpeed: 0
+  ReloadTime: 0
+  ClipSize: 0
+  AmmoInClip: 0
+  Ammo: 0
+  CurrentAmmo: 0
+  Pierces: 0
+  Rarity: 0
+  CommonCritChance: 0
+  CommonDamage: 0
+  CommonFireRate: 0
+  CommonRange: 0
+  UnCommonCritChance: 0
+  UnCommonDamage: 0
+  UnCommonFireRate: 0
+  UnCommonRange: 0
+  RareCritChance: 0
+  RareDamage: 0
+  RareFireRate: 0
+  RareRange: 0
+  EpicCritChance: 0
+  EpicDamage: 0
+  EpicFireRate: 0
+  EpicRange: 0
+  LegendaryCritChance: 0
+  LegendaryDamage: 0
+  LegendaryFireRate: 0
+  LegendaryRange: 0
+  CommonToUnCommonCost: 0
+  UnCommonToRareCost: 0
+  RareToEpicCost: 0
+  EpicToLegendaryCost: 0

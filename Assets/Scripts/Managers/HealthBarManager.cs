@@ -9,6 +9,7 @@ public class HealthBarManager : MonoBehaviour
     public static HealthBarManager Instance;
 
     public Slider bar;
+    public Slider shieldBar;
 
     public void Start()
     {
@@ -18,5 +19,10 @@ public class HealthBarManager : MonoBehaviour
     public void SetHealthBar(float num)
     {
         bar.value = num;
+    }
+
+    public void SetShieldBar(float num)
+    {
+        shieldBar.value = num;
     }
 }

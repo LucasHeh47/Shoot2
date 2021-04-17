@@ -58,7 +58,7 @@ public class EnemyManager : MonoBehaviour
     {
         for (int i = 0; i < enemiesThisRound; i++)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(Random.Range(1, 3));
             GameObject ChosenEnemy;
             ChosenEnemy = enemies[Random.Range(0, enemies.Length)];
             if (ChosenEnemy.GetComponent<EnemyHealth>().enemy.StartSpawningRound > Round) ChosenEnemy = DefaultSpawnEnemy;
@@ -86,7 +86,7 @@ public class EnemyManager : MonoBehaviour
         {
             for (int i = 0; i < enemies.Length; i++)
             {
-                enemies[i].GetComponent<EnemyHealth>().IncreaseMaxHealth();
+                if(enemies[i].GetComponent<EnemyHealth>().enemy.StartSpawningRound < Round) enemies[i].GetComponent<EnemyHealth>().IncreaseMaxHealth();
             }
         }
         float duration = 10f;

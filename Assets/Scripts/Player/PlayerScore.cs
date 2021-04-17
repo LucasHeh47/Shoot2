@@ -20,7 +20,7 @@ public class PlayerScore : MonoBehaviour
     public void AddScore(int num)
     {
         score = score + num;
-        text.SetText("Score: " + num);
+        text.SetText("Score: " + score);
     }
 
     // Update is called once per frame

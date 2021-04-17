@@ -19,10 +19,12 @@ MonoBehaviour:
   MaxHealthIncrease: 1.1
   MovementSpeed: 3
   ShootSound: {fileID: 0}
-  FireDelay: 0
+  FireDelay: 3
   ProjectileImage: {fileID: 0}
-  BulletSpeed: 6
+  Shoots: 1
+  BulletSpeed: 30
   ProjectileDamage: 35
   PhysicalDamage: 45
+  ProjectileRange: 3
   StartSpawningRound: 5
   PointsPerKill: 25

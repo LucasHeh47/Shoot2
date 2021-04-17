@@ -15,9 +15,11 @@ public class Enemy : ScriptableObject
     public AudioClip ShootSound;
     public float FireDelay;
     public Sprite ProjectileImage;
+    public bool Shoots;
     public float BulletSpeed;
     public float ProjectileDamage;
     public float PhysicalDamage;
+    public float ProjectileRange;
     public int StartSpawningRound;
     public int PointsPerKill;
 }
